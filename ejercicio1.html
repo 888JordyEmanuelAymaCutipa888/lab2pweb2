@@ -6,12 +6,16 @@
   </head>
 
   <body>
+    <p id = 'dia'></p>
     <script>
 	let d = new Date();
 	let day = d.getDay();
 	console.log(day);
 
-	obtenerDia(day);
+	let diaNombre = obtenerDia(day);
+	console.log(diaNombre);
+	document.getElementById("dia").innerHTML = diaNombre;
+
 	function obtenerDia(day){
 	    const dias = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];   
 	    console.log(dias);
