@@ -14,12 +14,17 @@
 	    let diaArequipa = 15;
 	    let diasRestantes = 0;
 	    if(mesArequipa <= fechaActual.getMonth() && diaArequipa < fechaActual.getDay()){
-		console.log("--");
+		const aniversarioMasProximo = new Date((fechaActual.getFullYear()+1), mesArequipa, diaArequipa);
+		diasRestantes = Math.round((aniversarioMasProximo.getTime()-fechaActual.getTime())/(1000*60*60*24))
+
 	    }else if(mesArequipa == fechaActual.getMonth() && diaArequipa == fechaActual.getDay()){
-		console.log("==");
+		diasRestantes = 0;
+
 	    }else{
-		console.log("++");
+		const aniversarioMasProximo = new Date(fechaActual.getFullYear(), mesArequipa, diaArequipa);
+		diasRestantes = Math.round((aniversarioMasProximo.getTime()-fechaActual.getTime())/(1000*60*60*24))
 	    }
+	    return diasRestantes;
         }
       </script>	
   </body>
