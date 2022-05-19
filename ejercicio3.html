@@ -8,8 +8,18 @@
   <body>
       <p id = "diasRestantes"></p>
       <script>
-	  function calcularDias(){
+	function calcularDias(){
 	    const fechaActual = new Date();
+	    let mesArequipa = 7;
+	    let diaArequipa = 15;
+	    let diasRestantes = 0;
+	    if(mesArequipa <= fechaActual.getMonth() && diaArequipa < fechaActual.getDay()){
+		console.log("--");
+	    }else if(mesArequipa == fechaActual.getMonth() && diaArequipa == fechaActual.getDay()){
+		console.log("==");
+	    }else{
+		console.log("++");
+	    }
         }
       </script>	
   </body>
