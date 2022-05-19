@@ -8,6 +8,11 @@
   <body>
       <p id = "diasRestantes"></p>
       <script>
+
+	diasRestantes = calcularDias();
+	let mostrarDias = document.getElementById('diasRestantes');
+	mostrarDias.innerHTML = "FALTAN " + diasRestantes + " DÍAS PARA EL ANIVERSARIO DE AREQUIPA";
+
 	function calcularDias(){
 	    const fechaActual = new Date();
 	    let mesArequipa = 7;
