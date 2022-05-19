@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+  </head>
+
+  <body>
+      <p id = 'met'></p>
+      <script>
+	
+	let codigo = "";
+	function obtenerCodigo(url){
+	    let codigo = "";
+	    for(let i = url.length; i >= (url.length-12); i--){
+		if(!(url.charAt(i) == "-")){
+		    codigo = url.charAt(i) + codigo;
+		}
+	    }
+	    console.log(codigo);
+	}
+      </script>
+  </body>
+</html>
+
