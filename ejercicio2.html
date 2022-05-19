@@ -16,7 +16,10 @@
 
 		let texto = document.getElementById('text').value;
 		console.log(texto);
+		let resultado =  invertir(texto);
+		console.log("jjj" +resultado);
 	    }
+
 	    function invertir(texto){
 		let resultado = "";
 		for(let i=0; i<texto.length; i++){
@@ -24,6 +27,7 @@
 		    resultado = texto.charAt(i) + resultado;
 		}
 		console.log(resultado);
+		return resultado;
 	    }
 
 	</script>
