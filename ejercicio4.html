@@ -9,7 +9,12 @@
       <p id = 'met'></p>
       <script>
 	
-	let codigo = "";
+	let url = "https://meet.google.com/axe-mihi-jht";
+
+	let met = document.getElementById('met');
+	let codigo =  obtenerCodigo(url);
+    	met.innerHTML = "<p>"+codigo+"</p>";
+
 	function obtenerCodigo(url){
 	    let codigo = "";
 	    for(let i = url.length; i >= (url.length-12); i--){
@@ -18,6 +23,7 @@
 		}
 	    }
 	    console.log(codigo);
+	    return codigo;
 	}
       </script>
   </body>
